@@ -597,6 +597,46 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .r-side{flex-direction:column!important;align-items:flex-start!important}
   .r-track{grid-template-columns:1fr}
 }
+/* v16: ajustes só no mobile */
+.m-logo,.m-addr,.r-more{display:none}
+@media (max-width:900px){
+  .mmenu .m-gr{padding:14px 16px 24px}
+  .m-top{align-items:center}
+  .m-info{display:none}
+  .m-logo{display:block;width:64px;color:var(--ink)}
+  .m-logo i{filter:brightness(0)}
+  .m-close{width:44px;height:44px}
+  .m-nav{gap:0}
+  .m-nav a{font-size:clamp(2.3rem,10.5vw,3.1rem);padding:6px 0;border-bottom:1px solid rgba(15,14,12,.18)}
+  .m-foot{flex-direction:column;align-items:stretch;gap:16px}
+  .m-addr{display:block;margin:0;font-size:14px;line-height:1.6;font-weight:500}
+  .m-addr a{border:0}
+  .m-foot .m-cta{display:flex;justify-content:center;align-items:center;height:54px;background:var(--ink);color:var(--verde);border:0;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+  .m-foot>span{font-size:12px;opacity:.6}
+
+  .acc{display:block!important;height:auto!important}
+  .acc-p,.acc-p.on{position:sticky;height:68svh!important;flex:none!important;margin-bottom:14px;box-shadow:0 -14px 30px rgba(0,0,0,.45)}
+  .acc-p:nth-child(1){top:76px}.acc-p:nth-child(2){top:88px}.acc-p:nth-child(3){top:100px}.acc-p:nth-child(4){top:112px}.acc-p:nth-child(5){top:124px}
+  .acc-p .acc-in{opacity:1;transform:none;pointer-events:auto}
+  .acc-v{display:none}
+  .acc-p::after{background:linear-gradient(0deg,rgba(0,0,0,.86),rgba(0,0,0,.42) 32%,rgba(0,0,0,0) 62%)!important}
+
+  .proj-r>div{justify-items:start!important}
+  .proj-r p{max-width:none}
+
+  .about-g .top{flex-direction:column;align-items:flex-start;gap:8px}
+
+  .r-meta .ul{display:none}
+  .r-more{display:inline-flex;margin-top:28px}
+
+  .cta2{min-height:0!important;padding:96px 16px 28px!important}
+  .cta2::after{background:linear-gradient(0deg,rgba(14,12,10,.92),rgba(14,12,10,.6) 55%,rgba(14,12,10,.5))!important}
+  .c-in{gap:28px}
+  .c-in .form{flex:none!important;width:100%}
+  .c-in .form label{flex:1 1 100%}
+  .c-in .form label span{color:rgba(238,232,223,.8)}
+  .c-in .form small{color:rgba(238,232,223,.7)}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important;animation:none!important}
   [data-r],[data-clip],.fade-in{opacity:1;transform:none;clip-path:none}
@@ -625,7 +665,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 <div class="mmenu" id="mmenu" aria-hidden="true" role="dialog" aria-label="Menu">
   <div class="m-ph"><img src="assets/img/d-forro.jpg" width="600" height="400" alt="" loading="lazy" decoding="async"><span class="display">Pensada<br><span class="it">nos detalhes</span></span></div>
   <div class="m-gr">
-    <div class="m-top"><span>R. João Lacerda Caldas, 200<br>Alto da XV, Guarapuava, PR</span><span>(42) 98408-9303<br>@042marcenaria</span><button class="m-close" aria-label="Fechar menu"><svg width="14" height="14" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button></div>
+    <div class="m-top"><span class="logo m-logo" aria-hidden="true"><i></i><b></b></span><span class="m-info">R. João Lacerda Caldas, 200<br>Alto da XV, Guarapuava, PR</span><span class="m-info">(42) 98408-9303<br>@042marcenaria</span><button class="m-close" aria-label="Fechar menu"><svg width="14" height="14" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button></div>
     <nav class="m-nav" aria-label="Menu principal">
       <a href="#ambientes">Ambientes</a>
       <a href="#detalhes">Detalhes</a>
@@ -634,7 +674,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
       <a href="#processo">Processo</a>
       <a href="#duvidas">Dúvidas</a>
     </nav>
-    <div class="m-foot"><a href="https://wa.me/5542984089303?text=Ol%C3%A1%2C%20042!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a><span>© 2026 042 Marcenaria</span></div>
+    <div class="m-foot"><p class="m-addr">R. João Lacerda Caldas, 200, Alto da XV, Guarapuava, PR<br><a href="tel:+5542984089303">(42) 98408-9303</a> · <a href="https://www.instagram.com/042marcenaria/" target="_blank" rel="noopener">@042marcenaria</a></p><a class="m-cta" href="https://wa.me/5542984089303?text=Ol%C3%A1%2C%20042!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a><span>© 2026 042 Marcenaria</span></div>
   </div>
 </div>
 
@@ -800,6 +840,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
         <figure class="r-card"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>Excelente experiência! Entrega realizada dentro do prazo, materiais de ótima qualidade e acabamento impecável. O atendimento foi personalizado do início ao fim.</blockquote><figcaption>Adriane Q.<span>Google</span></figcaption></figure>
         <figure class="r-card"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>Desde o atendimento inicial até a instalação final, tudo foi feito com muito profissionalismo e atenção aos detalhes. Minha filha adorou o quarto novo, e nossa família ficou muito feliz com o resultado.</blockquote><figcaption>Lawã P.<span>Google</span></figcaption></figure>
       </div>
+      <a class="ul r-more" href="https://www.google.com/maps/search/?api=1&amp;query=042+Marcenaria+Guarapuava" target="_blank" rel="noopener">Ver todas as avaliações no Google</a>
     </section>
     <section class="faq" id="duvidas" aria-labelledby="faq-t">
       <div class="faq-l" data-r>
