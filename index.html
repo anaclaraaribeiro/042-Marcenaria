@@ -22,10 +22,8 @@
 <meta name="twitter:image" content="https://042marcenaria.com.br/assets/og/hero.jpg">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/img/favicon-48.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/img/hero.jpg" fetchpriority="high">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="preload" as="image" href="assets/img/hero-720.webp" imagesrcset="assets/img/hero-720.webp 760w, assets/img/hero.webp 1080w" imagesizes="(max-width:900px) 100vw, 72vw" fetchpriority="high">
+<link rel="preload" as="font" href="assets/fonts/plus-jakarta-sans.woff2" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,6 +69,8 @@
 }
 </script>
 <style>
+@font-face{font-family:"Plus Jakarta Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url(assets/fonts/plus-jakarta-sans.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Playfair Display";font-style:italic;font-weight:400;font-display:swap;src:url(assets/fonts/playfair-italic.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 :root{
   --bg:#121110; --panel:#1A1816; --panel-2:#221E1A; --brown:#2C231C; --cream:#EAE3D8;
   --text:#EEE8DF; --soft:rgba(238,232,223,.72); --muted:#968B7E; --line:rgba(238,232,223,.12);
@@ -245,7 +245,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .proj-l{padding:0 clamp(24px,3vw,48px);align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;padding-top:110px;padding-bottom:40px;position:relative;z-index:3}
 .proj-l h2{margin:0;font-size:clamp(2.4rem,4.4vw,4.8rem);line-height:.95}
 .proj-name{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,2.4vw,2.6rem);line-height:1.05;white-space:nowrap;margin-right:-30%}
-.proj-l .cap{color:#7d7366}
+.proj-l .cap{color:#4f473d}
 .proj-track{position:relative;height:100%}
 .proj-track figure{position:absolute;left:0;right:0;top:50%;margin:0;aspect-ratio:4/5;max-height:72vh;overflow:hidden;border-radius:var(--r);transform:translateY(-50%);will-change:transform;background:#d8d0c3}
 .proj-track img{width:100%;height:100%;object-fit:cover}
@@ -464,7 +464,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .f-top{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:40px}
 .f-big{margin:0;font-size:clamp(2.2rem,4.2vw,4.6rem);max-width:12ch}
 .f-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;font-size:14.5px;font-weight:500}
-.f-cols h3{margin:0 0 14px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;opacity:.55}
+.f-cols h3{margin:0 0 14px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;opacity:.85}
 .f-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .f-cols address{font-style:normal;line-height:1.6}
 .f-cols a:hover{text-decoration:underline}
@@ -668,7 +668,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 </header>
 
 <div class="mmenu" id="mmenu" aria-hidden="true" role="dialog" aria-label="Menu">
-  <div class="m-ph"><img src="assets/img/d-forro.jpg" width="600" height="400" alt="" loading="lazy" decoding="async"><span class="display">Pensada<br><span class="it">nos detalhes</span></span></div>
+  <div class="m-ph"><img src="assets/img/d-forro.webp" width="600" height="400" alt="" loading="lazy" decoding="async"><span class="display">Pensada<br><span class="it">nos detalhes</span></span></div>
   <div class="m-gr">
     <div class="m-top"><span class="logo m-logo" aria-hidden="true"><i></i><b></b></span><span class="m-info">R. João Lacerda Caldas, 200<br>Alto da XV, Guarapuava, PR</span><span class="m-info">(42) 98408-9303<br>@042marcenaria</span><button class="m-close" aria-label="Fechar menu"><svg width="14" height="14" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6"><path d="M2 2l12 12M14 2L2 14"/></svg></button></div>
     <nav class="m-nav" aria-label="Menu principal">
@@ -687,10 +687,10 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   <!-- hero: vídeos reais dos projetos -->
   <section class="hero" aria-labelledby="h1">
     <div class="stage" id="stage">
-      <img class="slide" data-name="Área gourmet" src="assets/img/hero.jpg" width="1080" height="1560" alt="Área gourmet planejada pela 042 Marcenaria em Guarapuava, com forro em madeira e perfis de LED, cristaleira iluminada e ilha com frente ripada" fetchpriority="high" decoding="async" style="object-position:50% 38%">
-      <img class="slide" data-name="Painel de TV" src="assets/img/a-tv.jpg" width="900" height="1196" alt="Painel de TV planejado com ripado, nichos iluminados e rack suspenso com LED rente ao piso, em Guarapuava" decoding="async" style="object-position:50% 40%">
-      <img class="slide" data-name="Home office" src="assets/img/a-office.jpg" width="1000" height="1250" alt="Home office planejado com bancada, painel escuro, nichos em madeira e iluminação em LED, em Guarapuava" decoding="async" style="object-position:50% 55%">
-      <img class="slide" data-name="Closet" src="assets/img/a-closet.jpg" width="1000" height="1250" alt="Closet planejado com prateleiras, gaveteiros, cabideiros e perfis de LED, em Guarapuava" decoding="async" style="object-position:50% 35%">
+      <img class="slide" data-name="Área gourmet" src="assets/img/hero-720.webp" srcset="assets/img/hero-720.webp 760w, assets/img/hero.webp 1080w" sizes="(max-width:900px) 100vw, 72vw" width="1080" height="1560" alt="Área gourmet planejada pela 042 Marcenaria em Guarapuava, com forro em madeira e perfis de LED, cristaleira iluminada e ilha com frente ripada" fetchpriority="high" decoding="async" style="object-position:50% 38%">
+      <img class="slide" data-name="Painel de TV" data-m="assets/img/a-tv-720.webp" data-d="assets/img/a-tv.webp" width="900" height="1196" alt="Painel de TV planejado com ripado, nichos iluminados e rack suspenso com LED rente ao piso, em Guarapuava" decoding="async" style="object-position:50% 40%">
+      <img class="slide" data-name="Home office" data-m="assets/img/a-office-720.webp" data-d="assets/img/a-office.webp" width="1000" height="1250" alt="Home office planejado com bancada, painel escuro, nichos em madeira e iluminação em LED, em Guarapuava" decoding="async" style="object-position:50% 55%">
+      <img class="slide" data-name="Closet" data-m="assets/img/a-closet-720.webp" data-d="assets/img/a-closet.webp" width="1000" height="1250" alt="Closet planejado com prateleiras, gaveteiros, cabideiros e perfis de LED, em Guarapuava" decoding="async" style="object-position:50% 35%">
       <div class="stage-tx">
         <h1 id="h1"><span class="display"><span>Marcenaria sob medida</span></span><span class="display"><span class="it">em Guarapuava.</span></span><span class="sub">Pensada nos detalhes que fazem a rotina funcionar.</span></h1>
       </div>
@@ -698,9 +698,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
       <a class="notch" href="https://wa.me/5542984089303?text=Ol%C3%A1%2C%20042!%20Vim%20pelo%20site%20e%20quero%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento<span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M5 3h6v6"/></svg></span></a>
     </div>
     <div class="side">
-      <a class="fade-in" href="#projetos"><img src="assets/img/sobre.jpg" width="800" height="1000" alt="Cozinha planejada com bancada de granito preto, armários brancos e LED sob os aéreos, projeto da 042 Marcenaria" decoding="async"><span class="cap">Projetos entregues</span><span class="lbl cap">Ver <span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M5 3h6v6"/></svg></span></span></a>
-      <a class="fade-in" href="#sobre"><img src="assets/img/g-sala2.jpg" width="720" height="867" alt="Aparador planejado com LED rente ao piso" decoding="async"><span class="cap">Sobre a 042</span><span class="lbl cap">Conheça <span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M5 3h6v6"/></svg></span></span></a>
-      <a class="fade-in" href="#contato"><img src="assets/img/card-ilha.jpg" width="720" height="667" alt="Cozinha planejada com ilha e armários cinza, projeto da 042 Marcenaria" decoding="async"><span class="cap">Peça seu orçamento</span><span class="lbl cap">Contato <span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M5 3h6v6"/></svg></span></span></a>
+      <a class="fade-in" href="#projetos"><img src="assets/img/sobre.webp" width="800" height="1000" alt="Cozinha planejada com bancada de granito preto, armários brancos e LED sob os aéreos, projeto da 042 Marcenaria" decoding="async"><span class="cap">Projetos entregues</span><span class="lbl cap">Ver <span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M5 3h6v6"/></svg></span></span></a>
+      <a class="fade-in" href="#sobre"><img src="assets/img/g-sala2.webp" width="720" height="867" alt="Aparador planejado com LED rente ao piso" decoding="async"><span class="cap">Sobre a 042</span><span class="lbl cap">Conheça <span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M5 3h6v6"/></svg></span></span></a>
+      <a class="fade-in" href="#contato"><img src="assets/img/card-ilha.webp" width="720" height="667" alt="Cozinha planejada com ilha e armários cinza, projeto da 042 Marcenaria" decoding="async"><span class="cap">Peça seu orçamento</span><span class="lbl cap">Contato <span class="circ"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11L11 3M5 3h6v6"/></svg></span></span></a>
     </div>
   </section>
 
@@ -714,7 +714,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
         <span class="cap foot">042 · Guarapuava</span>
       </div>
       <div class="philo-r" data-clip>
-        <img data-par src="assets/img/philo-sala.jpg" width="1200" height="1200" loading="lazy" decoding="async" alt="Sala planejada com painel ripado iluminado, nichos com LED e rack suspenso, em Guarapuava">
+        <img data-par src="assets/img/philo-sala.webp" width="1200" height="1200" loading="lazy" decoding="async" alt="Sala planejada com painel ripado iluminado, nichos com LED e rack suspenso, em Guarapuava">
         <h2 id="philo-t" class="display">Pensada <span class="it">nos detalhes</span></h2>
       </div>
     </section>
@@ -727,44 +727,44 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
       </div>
       <div class="acc" id="acc">
         <article class="acc-p on" tabindex="0">
-          <img src="assets/img/amb-cozinha.jpg" width="900" height="1125" loading="lazy" decoding="async" alt="Cozinha planejada em Guarapuava com ilha branca, armários cinza, nichos iluminados e torre de eletros">
+          <img src="assets/img/amb-cozinha.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Cozinha planejada em Guarapuava com ilha branca, armários cinza, nichos iluminados e torre de eletros">
           <span class="acc-v cap">01 · Cozinhas</span>
-          <div class="acc-in"><span class="cap n">01</span><h3>Cozinhas planejadas</h3><p>Do primeiro esboço em 3D à entrega. Ilha, torre de eletros e nichos com LED pensados para o jeito que você cozinha, guarda e recebe.</p><a class="ul" data-env="uma cozinha planejada" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero uma assim</a></div>
+          <div class="acc-in"><span class="cap n">01</span><h3>Cozinhas planejadas</h3><p>Do primeiro esboço em 3D à entrega. Ilha, torre de eletros e nichos com LED pensados para o jeito que você cozinha, guarda e recebe.</p><a class="ul" data-env="uma cozinha planejada" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero uma cozinha assim</a></div>
         </article>
         <article class="acc-p" tabindex="0">
-          <img src="assets/img/amb-gourmet2.jpg" width="900" height="1125" loading="lazy" decoding="async" alt="Área gourmet planejada com forro em madeira, perfis de LED, pendentes sobre a ilha e cristaleira iluminada, em Guarapuava">
+          <img src="assets/img/amb-gourmet2.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Área gourmet planejada com forro em madeira, perfis de LED, pendentes sobre a ilha e cristaleira iluminada, em Guarapuava">
           <span class="acc-v cap">02 · Gourmet</span>
-          <div class="acc-in"><span class="cap n">02</span><h3>Áreas gourmet</h3><p>Materiais bem escolhidos, linhas contemporâneas e iluminação planejada para receber bem e usar todos os dias.</p><a class="ul" data-env="uma área gourmet" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero uma assim</a></div>
+          <div class="acc-in"><span class="cap n">02</span><h3>Áreas gourmet</h3><p>Materiais bem escolhidos, linhas contemporâneas e iluminação planejada para receber bem e usar todos os dias.</p><a class="ul" data-env="uma área gourmet" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero uma área gourmet assim</a></div>
         </article>
         <article class="acc-p" tabindex="0">
-          <img src="assets/img/h-tv.jpg" width="1080" height="1200" loading="lazy" decoding="async" alt="Sala integrada com painel de TV ripado em madeira e rack suspenso, em Guarapuava">
+          <img src="assets/img/h-tv.webp" width="1080" height="1200" loading="lazy" decoding="async" alt="Sala integrada com painel de TV ripado em madeira e rack suspenso, em Guarapuava">
           <span class="acc-v cap">03 · Painéis de TV</span>
-          <div class="acc-in"><span class="cap n">03</span><h3>Salas e painéis de TV</h3><p>Painel ripado, nichos iluminados e rack suspenso com luz rente ao piso: a sala fica bonita e organizada no dia a dia.</p><a class="ul" data-env="um painel de TV" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero um assim</a></div>
+          <div class="acc-in"><span class="cap n">03</span><h3>Salas e painéis de TV</h3><p>Painel ripado, nichos iluminados e rack suspenso com luz rente ao piso: a sala fica bonita e organizada no dia a dia.</p><a class="ul" data-env="um painel de TV" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero um painel assim</a></div>
         </article>
         <article class="acc-p" tabindex="0">
-          <img src="assets/img/acc-closet.jpg" width="900" height="1137" loading="lazy" decoding="async" alt="Closet planejado com prateleiras, gaveteiros, cabideiros e perfis de LED, em Guarapuava">
+          <img src="assets/img/acc-closet.webp" width="900" height="1137" loading="lazy" decoding="async" alt="Closet planejado com prateleiras, gaveteiros, cabideiros e perfis de LED, em Guarapuava">
           <span class="acc-v cap">04 · Closets</span>
-          <div class="acc-in"><span class="cap n">04</span><h3>Closets</h3><p>Cabideiros, prateleiras e gavetas na medida do que você guarda, com perfis de LED para enxergar tudo.</p><a class="ul" data-env="um closet" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero um assim</a></div>
+          <div class="acc-in"><span class="cap n">04</span><h3>Closets</h3><p>Cabideiros, prateleiras e gavetas na medida do que você guarda, com perfis de LED para enxergar tudo.</p><a class="ul" data-env="um closet" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero um closet assim</a></div>
         </article>
         <article class="acc-p" tabindex="0">
-          <img src="assets/img/acc-office.jpg" width="720" height="1280" loading="lazy" decoding="async" alt="Home office planejado com bancada, painel escuro, nichos em madeira e iluminação em LED, em Guarapuava">
+          <img src="assets/img/acc-office.webp" width="720" height="1280" loading="lazy" decoding="async" alt="Home office planejado com bancada, painel escuro, nichos em madeira e iluminação em LED, em Guarapuava">
           <span class="acc-v cap">05 · Home office</span>
-          <div class="acc-in"><span class="cap n">05</span><h3>Home office</h3><p>Bancada na altura certa, nichos à mão e luz embutida para trabalhar em casa com conforto.</p><a class="ul" data-env="um home office" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero um assim</a></div>
+          <div class="acc-in"><span class="cap n">05</span><h3>Home office</h3><p>Bancada na altura certa, nichos à mão e luz embutida para trabalhar em casa com conforto.</p><a class="ul" data-env="um home office" href="https://wa.me/5542984089303" target="_blank" rel="noopener">Quero um home office assim</a></div>
         </article>
       </div>
     </section>
 
     <!-- detalhes -->
     <section class="det" id="detalhes" aria-labelledby="det-t">
-      <figure data-clip><img src="assets/img/m-forro.jpg" width="860" height="560" loading="lazy" decoding="async" alt="Forro em madeira com perfis de LED e pendentes em área gourmet planejada"><figcaption class="cap">Forro com perfis de LED</figcaption></figure>
-      <figure data-clip style="--d:.05s"><img src="assets/img/d-nichos.jpg" width="580" height="420" loading="lazy" decoding="async" alt="Nichos iluminados com LED em painel de TV planejado"><figcaption class="cap">Nichos iluminados</figcaption></figure>
-      <figure data-clip style="--d:.1s"><img src="assets/img/d-comoda.jpg" width="720" height="480" loading="lazy" decoding="async" alt="Cômoda planejada com puxadores pretos em meia-lua"><figcaption class="cap">Puxadores em meia-lua</figcaption></figure>
-      <figure data-clip style="--d:.05s"><img src="assets/img/d-prateleiras.jpg" width="720" height="480" loading="lazy" decoding="async" alt="Prateleiras suspensas em madeira sobre bancada de home office"><figcaption class="cap">Prateleiras suspensas</figcaption></figure>
+      <figure data-clip><img src="assets/img/m-forro.webp" width="860" height="560" loading="lazy" decoding="async" alt="Forro em madeira com perfis de LED e pendentes em área gourmet planejada"><figcaption class="cap">Forro com perfis de LED</figcaption></figure>
+      <figure data-clip style="--d:.05s"><img src="assets/img/d-nichos.webp" width="580" height="420" loading="lazy" decoding="async" alt="Nichos iluminados com LED em painel de TV planejado"><figcaption class="cap">Nichos iluminados</figcaption></figure>
+      <figure data-clip style="--d:.1s"><img src="assets/img/d-comoda.webp" width="720" height="480" loading="lazy" decoding="async" alt="Cômoda planejada com puxadores pretos em meia-lua"><figcaption class="cap">Puxadores em meia-lua</figcaption></figure>
+      <figure data-clip style="--d:.05s"><img src="assets/img/d-prateleiras.webp" width="720" height="480" loading="lazy" decoding="async" alt="Prateleiras suspensas em madeira sobre bancada de home office"><figcaption class="cap">Prateleiras suspensas</figcaption></figure>
       <div class="det-c" data-r><h2 id="det-t" class="display"><span class="it">Detalhes</span></h2><p>que trabalham a favor da rotina</p></div>
-      <figure data-clip style="--d:.1s"><img src="assets/img/m-ripado.jpg" width="560" height="420" loading="lazy" decoding="async" alt="Painel ripado em madeira atrás da TV em sala planejada"><figcaption class="cap">Painel ripado</figcaption></figure>
-      <figure data-clip style="--d:.1s"><img src="assets/img/d-escrivaninha.jpg" width="860" height="547" loading="lazy" decoding="async" alt="Bancada de home office com LED embutido e painel escuro"><figcaption class="cap">Bancada com LED</figcaption></figure>
-      <figure data-clip style="--d:.15s"><img src="assets/img/m-nichos.jpg" width="480" height="360" loading="lazy" decoding="async" alt="Nicho com LED sob os armários aéreos em cozinha planejada"><figcaption class="cap">LED sob os aéreos</figcaption></figure>
-      <figure data-clip style="--d:.2s"><img src="assets/img/m-aparador.jpg" width="860" height="557" loading="lazy" decoding="async" alt="Aparador planejado com LED rente ao piso"><figcaption class="cap">Luz rente ao piso</figcaption></figure>
+      <figure data-clip style="--d:.1s"><img src="assets/img/m-ripado.webp" width="560" height="420" loading="lazy" decoding="async" alt="Painel ripado em madeira atrás da TV em sala planejada"><figcaption class="cap">Painel ripado</figcaption></figure>
+      <figure data-clip style="--d:.1s"><img src="assets/img/d-escrivaninha.webp" width="860" height="547" loading="lazy" decoding="async" alt="Bancada de home office com LED embutido e painel escuro"><figcaption class="cap">Bancada com LED</figcaption></figure>
+      <figure data-clip style="--d:.15s"><img src="assets/img/m-nichos.webp" width="480" height="360" loading="lazy" decoding="async" alt="Nicho com LED sob os armários aéreos em cozinha planejada"><figcaption class="cap">LED sob os aéreos</figcaption></figure>
+      <figure data-clip style="--d:.2s"><img src="assets/img/m-aparador.webp" width="860" height="557" loading="lazy" decoding="async" alt="Aparador planejado com LED rente ao piso"><figcaption class="cap">Luz rente ao piso</figcaption></figure>
     </section>
 
     <!-- materiais -->
@@ -774,9 +774,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
         <p data-r>Cada material é escolhido com você, pensando em como o ambiente vai ser usado e em quanto tempo ele precisa durar bonito.</p>
       </div>
       <div class="tri3">
-        <figure data-clip><img src="assets/img/ac-granito.jpg" width="600" height="1067" loading="lazy" decoding="async" alt="Cozinha planejada com bancada em granito São Gabriel, armários brancos e banquetas de palhinha"><figcaption><span>Granito<br>São Gabriel</span></figcaption></figure>
-        <figure data-clip style="--d:.1s"><img src="assets/img/ac-led2.jpg" width="600" height="1041" loading="lazy" decoding="async" alt="Painel planejado com nichos iluminados por perfis de LED embutidos"><figcaption><span>Perfis de LED<br>embutidos</span></figcaption></figure>
-        <figure data-clip style="--d:.2s"><img src="assets/img/ac-madeira2.jpg" width="600" height="1067" loading="lazy" decoding="async" alt="Armário planejado amadeirado com prateleiras, gavetas e iluminação em LED"><figcaption><span>Amadeirados<br>sob medida</span></figcaption></figure>
+        <figure data-clip><img src="assets/img/ac-granito.webp" width="600" height="1067" loading="lazy" decoding="async" alt="Cozinha planejada com bancada em granito São Gabriel, armários brancos e banquetas de palhinha"><figcaption><span>Granito<br>São Gabriel</span></figcaption></figure>
+        <figure data-clip style="--d:.1s"><img src="assets/img/ac-led2.webp" width="600" height="1041" loading="lazy" decoding="async" alt="Painel planejado com nichos iluminados por perfis de LED embutidos"><figcaption><span>Perfis de LED<br>embutidos</span></figcaption></figure>
+        <figure data-clip style="--d:.2s"><img src="assets/img/ac-madeira2.webp" width="600" height="1067" loading="lazy" decoding="async" alt="Armário planejado amadeirado com prateleiras, gavetas e iluminação em LED"><figcaption><span>Amadeirados<br>sob medida</span></figcaption></figure>
       </div>
     </section>
 
@@ -788,12 +788,12 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
           <span class="proj-name" id="projName">Cozinha integrada</span>
         </div>
         <div class="proj-track" id="projTrack">
-          <figure data-n="Cozinha integrada"><img src="assets/img/g-coz3.jpg" width="720" height="960" decoding="async" alt="Cozinha planejada integrada com ilha de tampo branco e armários cinza, Guarapuava"></figure>
-          <figure data-n="Área gourmet"><img src="assets/img/g-gou2.jpg" width="720" height="900" decoding="async" alt="Bancada escura com gavetas em área gourmet planejada com painel ripado"></figure>
-          <figure data-n="Sala e jantar"><img src="assets/img/g-sala1.jpg" width="720" height="867" decoding="async" alt="Sala com divisória ripada, estante com nichos e banco sob medida iluminado"></figure>
-          <figure data-n="Torre de eletros"><img src="assets/img/g-coz2.jpg" width="720" height="900" decoding="async" alt="Cozinha planejada com torre de eletros e bancada de granito preto"></figure>
-          <figure data-n="Quarto de bebê"><img src="assets/img/g-beb1.jpg" width="480" height="640" decoding="async" alt="Quarto de bebê planejado com berço em madeira, poltrona de amamentação e LED rente ao rodapé"></figure>
-          <figure data-n="Cozinha em L"><img src="assets/img/g-coz5.jpg" width="720" height="1067" decoding="async" alt="Cozinha planejada com armários claros e eletros embutidos"></figure>
+          <figure data-n="Cozinha integrada"><img src="assets/img/g-coz3.webp" width="720" height="960" decoding="async" alt="Cozinha planejada integrada com ilha de tampo branco e armários cinza, Guarapuava"></figure>
+          <figure data-n="Área gourmet"><img src="assets/img/g-gou2.webp" width="720" height="900" decoding="async" alt="Bancada escura com gavetas em área gourmet planejada com painel ripado"></figure>
+          <figure data-n="Sala e jantar"><img src="assets/img/g-sala1.webp" width="720" height="867" decoding="async" alt="Sala com divisória ripada, estante com nichos e banco sob medida iluminado"></figure>
+          <figure data-n="Torre de eletros"><img src="assets/img/g-coz2.webp" width="720" height="900" decoding="async" alt="Cozinha planejada com torre de eletros e bancada de granito preto"></figure>
+          <figure data-n="Quarto de bebê"><img src="assets/img/g-beb1.webp" width="480" height="640" decoding="async" alt="Quarto de bebê planejado com berço em madeira, poltrona de amamentação e LED rente ao rodapé"></figure>
+          <figure data-n="Cozinha em L"><img src="assets/img/g-coz5.webp" width="720" height="1067" decoding="async" alt="Cozinha planejada com armários claros e eletros embutidos"></figure>
         </div>
         <div class="proj-r">
           <span class="proj-count" id="projCount">01 / 06</span>
@@ -804,7 +804,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 
     <!-- sobre -->
     <section class="about" id="sobre" aria-labelledby="sobre-t">
-      <div class="about-ph" data-clip><img src="assets/img/sobre-042.jpg" width="1000" height="1094" loading="lazy" decoding="async" alt="Profissional da 042 Marcenaria com amostras de acabamentos sobre a mesa, no escritório em Guarapuava" style="object-position:50% 30%"></div>
+      <div class="about-ph" data-clip><img src="assets/img/sobre-042.webp" width="1000" height="1094" loading="lazy" decoding="async" alt="Profissional da 042 Marcenaria com amostras de acabamentos sobre a mesa, no escritório em Guarapuava" style="object-position:50% 30%"></div>
       <div class="about-g" data-r>
         <div class="top"><span class="cap">Sobre a 042</span><span class="nowrap">Arquiteto + marcenaria própria</span></div>
         <div>
@@ -864,7 +864,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 
     <!-- cta final -->
     <section class="cta2" id="contato" aria-labelledby="cta-t">
-      <img src="assets/img/cta-bg.jpg" width="1080" height="1000" loading="lazy" decoding="async" alt="Área gourmet planejada com painel ripado em madeira, pendentes e bancada escura, em Guarapuava">
+      <img src="assets/img/cta-bg.webp" width="1080" height="1000" loading="lazy" decoding="async" alt="Área gourmet planejada com painel ripado em madeira, pendentes e bancada escura, em Guarapuava">
       <video id="ctaVid" muted playsinline loop preload="none" data-src="assets/video/sala-jantar.mp4" aria-hidden="true"></video>
       <div class="c-in">
         <h2 id="cta-t" class="display" data-r>Quer aproveitar melhor o seu ambiente? <span class="it">Chame a 042.</span></h2>
@@ -912,6 +912,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 
   /* hero: fotos dos projetos alternando */
   var vids=[].slice.call(d.querySelectorAll('#stage .slide')),clips=d.getElementById('clips'),ci=0,timer=0,DUR=5600,t0=0,raf=0;
+  /* fotos 2 a 4 do hero só carregam depois da página */
+  function loadSlides(){vids.forEach(function(v){if(!v.getAttribute('src')&&v.dataset.d)v.src=isMob()?v.dataset.m:v.dataset.d})}
+  if(d.readyState==='complete')setTimeout(loadSlides,300);else W.addEventListener('load',function(){setTimeout(loadSlides,300)});
   vids.forEach(function(v,i){
     var b=d.createElement('button');b.className='clip cap';b.type='button';b.setAttribute('role','tab');
     b.innerHTML='<span class="bar"><i></i></span><span>'+('0'+(i+1)).slice(-2)+' '+v.dataset.name+'</span>';
